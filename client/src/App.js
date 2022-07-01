@@ -1,6 +1,6 @@
 import Home from './components/Home';
 import './App.css';
-import { Route, Routes, BrowserRouter as Router, Navigate } from 'react-router-dom'
+import { Route, Routes, HashRouter as Router, Navigate } from 'react-router-dom'
 import About from './components/About';
 import Navbar from './components/Navbar';
 import NotesContextProvider from './Contexts/NotesContextProvider';
