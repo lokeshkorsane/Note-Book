@@ -2,7 +2,7 @@ import React, { useContext, useRef } from 'react'
 import { NotesContext } from '../../Contexts/NotesContextProvider';
 import { useNavigate } from 'react-router-dom'
 
-const DeleteAccountModal = ({ id }) => {
+const DeleteAccountModal = () => {
   const ref = useRef(null);
   const Navigate = useNavigate();
   const { host } = useContext(NotesContext);

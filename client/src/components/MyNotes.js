@@ -19,7 +19,7 @@ const MyNotes = () => {
         <button className="btn btn-primary me-md-2" type="button" onClick={(e) => { e.preventDefault(); Navigate('/addnote') }}>Add Note</button>
       </div>
 
-      <h3 className='text-center'>My Notes</h3>
+      <h3 className='text-center mt-5'>My Notes</h3>
 
       {notes.length &&
         <div className="row">
