@@ -3,7 +3,8 @@ export const NotesContext = createContext();
 
 const NotesContextProvider = (props) => {
 
-  const host = "";
+  let host = "http://localhost:5000";
+  if(process.env.NODE_ENV==='production') host="";
   const [note, setNote] = useState({ id: "", title: "", tag: "", description: "" })
   const [notes, setNotes] = useState([]);
   const [user, setUser] = useState({ name: "", email: "", id: "" });

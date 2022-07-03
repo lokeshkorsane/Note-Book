@@ -22,9 +22,9 @@ const MyNotes = () => {
       <h3 className='text-center mt-5'>My Notes</h3>
 
       {notes.length &&
-        <div className="row">
+        <div className="row mx-5">
           {
-            notes.map(obj => (<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-around my-2 mx-0 px-0" key={obj._id}>
+            notes.map(obj => (<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-around my-4 px-4 px-0" key={obj._id}>
               <NoteBody title={obj.title} description={obj.description} tag={obj.tag} id={obj._id} />
             </div>))
           }

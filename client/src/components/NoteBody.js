@@ -5,12 +5,12 @@ const NoteBody = ({ title, description, tag, id }) => {
 
   const Navigate = useNavigate();
   return (
-    <div style={{ position: "relative", width: "100%" }} className="mx-5 my-4">
+    <div style={{ position: "relative", width: "100%",whiteSpace:"pre-wrap"}} >
 
-      <div className="card" style={{ height: "24rem", overflow: "scroll" }}>
-        <div className="card-body text-center">
-          <h5 className="card-title">{title}</h5>
-          <h6 className="card-subtitle mb-2 text-muted">{tag}</h6>
+      <div className="card" style={{ height: "24rem",overflowY:"scroll"  }}>
+        <div className="card-body">
+          <h5 className="card-title text-center">{title}</h5>
+          <h6 className="card-subtitle mb-2 text-muted text-center">{tag}</h6>
           <p className="card-text">{description}</p>
         </div>
       </div>

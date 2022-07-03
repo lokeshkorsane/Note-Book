@@ -24,7 +24,7 @@ const DeleteAccountModal = () => {
   return (
     <div >
 
-      <button type="button" ref={ref} className="btn btn-danger me-md-2 mx-2 my-2" style={{ width: "96%" }} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <button type="button" ref={ref} className="btn btn-danger me-md-2 mx-2 mt-2" style={{ width: "96%" }} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Delete Account
       </button>
 
