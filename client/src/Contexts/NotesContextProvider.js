@@ -39,12 +39,13 @@ const NotesContextProvider = (props) => {
         'auth-token': localStorage.getItem('auth-token')
       }
     })
+    setNotes(notes.filter(x=>x._id!==id));
   }
 
 
 
   const addNote = async (title, tag, description) => {
-    await fetch(`${host}/api/notes/addnotes`, {
+    const res=await fetch(`${host}/api/notes/addnotes`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -54,6 +55,8 @@ const NotesContextProvider = (props) => {
         title, tag: tag ? tag : "general", description
       })
     })
+    const data=await res.json();
+    setNotes(data.Notes);
   }
 
 

@@ -20,7 +20,7 @@ const Add_Note = async (req, res) => {
                 Notes: note
             }
         }, { new: true });
-        res.json({ ok: true });
+        res.json(data);
     } catch (error) {
         res.json(error);
     }
@@ -31,7 +31,7 @@ const Delete_Note = async (req, res) => {
     try {
         const userID = req.userID;
         const id = req.params.id;
-        const data = await User.findByIdAndUpdate(userID, {
+        await User.findByIdAndUpdate(userID, {
             $pull: { Notes: { _id: id } }
         }, { new: true });
 
@@ -56,7 +56,7 @@ const Edit_Note = async (req, res) => {
                 notes[i].description = description;
             }
         }
-        const fdata = await User.findByIdAndUpdate(userID, {
+        await User.findByIdAndUpdate(userID, {
             $set: {
                 Notes: notes
             }
